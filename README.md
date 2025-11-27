@@ -168,12 +168,13 @@ Create a configuration file:
 sudo nano /etc/nginx/sites-available/product-api
 ```
 
-Add the following content (replace `your_domain.com`):
+Add the following content. You can use your domain name (e.g., `example.com`) OR your server's public IP address (e.g., `203.0.113.1`).
 
 ```nginx
 server {
     listen 80;
-    server_name your_domain.com;
+    # Replace with your Domain or Public IP
+    server_name _; 
 
     location / {
         proxy_pass http://localhost:3000;
